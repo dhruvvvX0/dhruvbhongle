@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Dhruv Bhongle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in-page">
+
+    <div class="liquid-blob"></div>
+
+    <div class="glass-card">
+        <span class="tag">About Me</span>
+        
+        <div class="profile-img-container">
+            <img src="your-photo.jpg" alt="Dhruv Bhongle" class="profile-img">
+        </div>
+
+        <h1>Dhruv <span class="accent-text">Bhongle</span></h1>
+        
+        <p>
+            I'm Dhruv Bhongle. I'm really interested in photography, AI tools, and front-end web development. I love to do random stuffs, try new tech, and create cool visual things. Currently <span id="my-age" class="accent-text" style="font-weight: 700;"></span> years old and just getting started.
+        </p>
+        
+        <button onclick="navigateToSocials()" class="cta-btn">Connect With Me</button>
+
+        <footer class="social-footer">
+            © <span id="current-year-main"></span> Dhruv Bhongle. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        // Automatic Year Synchronizer for Footer
+        document.getElementById('current-year-main').textContent = new Date().getFullYear();
+
+        // Precise Age Calculator (Birthdate: 15/04/2008)
+        function calculateExactAge(birthDateString) {
+            const today = new Date();
+            const birthDate = new Date(birthDateString);
+            
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        // Inject the precise age into your paragraph span
+        document.getElementById('my-age').textContent = calculateExactAge("2008-04-15");
+
+        // Prevents browser routing memory duplication loops on physical devices
+        function navigateToSocials() {
+            window.location.replace("socials.html");
+        }
+    </script>
+</body>
+</html>
