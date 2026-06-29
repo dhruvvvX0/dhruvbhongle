@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Dhruv Bhongle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="socials.css">
+</head>
+<body class="fade-in-page">
+
+    <div class="liquid-blob"></div>
+
+    <div class="glass-card">
+        <button onclick="navigateHome()" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        
+        <h2>Find Me On</h2>
+        
+        <div class="social-grid">
+            
+            <a href="https://instagram.com/dhruvbhongle" target="_blank" class="social-item">
+                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <span>dhruvbhongle</span>
+            </a>
+
+            <a href="https://instagram.com/frames_dv" target="_blank" class="social-item">
+                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <span>frames_dv</span>
+            </a>
+
+            <a href="https://snapchat.com/add/dhruv.bhongle" target="_blank" class="social-item">
+                <div class="icon-box"><i class="fa-brands fa-snapchat"></i></div>
+                <span>dhruv.bhongle</span>
+            </a>
+
+            <a href="https://x.com/dhruvvvX0" target="_blank" class="social-item">
+    <div class="icon-box"><i class="fa-brands fa-x-twitter"></i></div>
+    <span>dhruvvvX0</span>
+</a>
+
+            <a href="https://pinterest.com" target="_blank" class="social-item">
+                <div class="icon-box"><i class="fa-brands fa-pinterest"></i></div>
+                <span>Pinterest</span>
+            </a>
+
+            <a href="https://open.spotify.com/user/31pcvyic7lp2n3tycb5dvvhx2gge?si=94e3k1R6SRun_qZ3nsYW1g" target="_blank" class="social-item">
+                <div class="icon-box"><i class="fa-brands fa-spotify"></i></div>
+                <span>Dhruvbhongle.exe</span>
+            </a>
+
+            <a href="https://reddit.com" target="_blank" class="social-item">
+                <div class="icon-box"><i class="fa-brands fa-reddit-alien"></i></div>
+                <span>Reddit</span>
+            </a>
+            
+            <a href="https://github.com/your_username" target="_blank" class="social-item">
+    <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+    <span>GitHub</span>
+</a>
+
+
+        </div>
+
+        <footer class="social-footer">
+            © <span id="current-year-socials"></span> Dhruv Bhongle. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('current-year-socials').textContent = new Date().getFullYear();
+
+        // Safe tracking cleanup redirection functions
+        function navigateHome() {
+            window.location.replace("index.html");
+        }
+    </script>
+</body>
+</html>
